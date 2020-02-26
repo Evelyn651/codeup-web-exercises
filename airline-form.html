@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airline Form</title>
+</head>
+<form action="https://request-inspector.glitch.me" method="post">
+    <body>
+    <div>
+        <a href="https://www.bookaahotels.com/index.html?aid=366304&label=aa-homepage-sb&lang=en&selected_currency=USD">Hotels</a>
+        <div>
+            <a href="https://www.aa.com/car?execution=e1s1">Cars</a>
+        </div>
+        <input type="radio" name="flight type" value="Round Trip">Round Trip
+        <div>
+            <input type="radio" name="flight type" value="One Way">One Way
+        </div>
+        <div>
+            <input type="checkbox" name="miles" value="Redeem Miles">Redeem Miles
+        </div>
+        <div>
+            <label for="flightsfrom">From <input id="flightsfrom" type="text" placeholder="City or airport"></label>
+        </div>
+        <div>
+            <label for="flightsto">To</label><input id="flightsto" type="text" placeholder="City or airport">
+        </div>
+        <div>
+            Number of Passengers
+            <select name="passengers" id="passengers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <label for="departure">Depart<input id="departure" type="date"><input type="color"></label>
+        <label for="return">Return<input id="return" type="date"><input type="color"></label>
+
+        <button type="submit">Search</button>
+    </div>
+    </body>
+</form>
+</html>
