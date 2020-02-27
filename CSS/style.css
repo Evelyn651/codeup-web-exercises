@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+.fancy-header{
+    color: darkslateblue;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-align: center;
+}
+body{
+    color: darkslateblue;
+    background-color: lightgrey;
+    background-image: url("https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/4492445/300/200/m1/fpnw/wm0/a7z2ngwz2soneopipgbr5lgnyjsr9q62q2f5hgiwwizzmlosn3sqb8wfcw78lxyv-.jpg?1527015157&s=1f853f24e3a5d8283b9b35a1f7254baa");
+    background-repeat: round;
+    font-family: "Simonetta", "Arial";
+}
+
+h2{
+    color: darkslateblue;
+    text-decoration: underline;
+    text-decoration-color: gray;
+}
+ul{
+    list-style: upper-roman;
+}
+tr, td {
+    font-size: large;
+    padding: 50px;
+    text-align: center;
+}
+a:hover{
+    background-color: lightgrey;
+}
+a:link{
+    text-decoration: underline;
+    text-decoration-color: gray;
+}
+a:visited{
+    color: cadetblue;
+
+}
