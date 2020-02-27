@@ -13,19 +13,25 @@
     <label for="password">Password</label>
     <input id="password" name="password" type="password" placeholder="Password Here">
     <br>
+    <button type="submit">Register</button>
+    <div><br>
     <label for="Bio">Bio<textarea name="Bio" id="Bio" cols="40" rows="8" placeholder="Content Here"></textarea></label>
+    </div>
+    <div>
     <br>
-    How Did You Hear About Us?
-    <label><input type="radio" name="source" value="Billboard">Billboard</label>
-    <label><input type="radio" name="source" value="Radio Advertisement">Radio Advertisement</label>
-    <label><input type="radio" name="source" value="Internet Advertisement">Internet Advertisement</label>
-    <label><input type="radio" name="source" value="Other">Other</label>
+    <h3>How Did You Hear About Us?</h3>
+    <label for="billboard"><input id="billboard" type="radio" name="source-billboard" value="true">Billboard</label><br>
+    <label for="radioad"><input id="radioad" type="radio" name="source-radioad" value="true">Radio Advertisement</label><br>
+    <label for="internetad"><input id="internetad" type="radio" name="source-internetad" value="true">Internet Advertisement</label><br>
+    <label for="otherad"><input id="otherad" type="radio" name="source-other" value="true">Other</label><br>
+    </div>
     <br>
     What web browser are you currently using?
-    <select name="web browser" id="web browser">
+    <select name="browser" id="web browser">
         <option value="Chrome">Chrome</option>
         <option value="Firefox">Firefox</option>
         <option value="Safari">Safari</option>
+        <option value="Edge">Edge</option>
     </select>
 
     <button type="submit">Submit</button>
