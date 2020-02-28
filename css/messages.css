@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+#info {
+    color: darkblue;
+    border: .5px solid lightgrey;
+    background-color: lightblue;
+    padding: 1em 2em;
+    margin: 10px 10px;
+}
+
+#success {
+    color: darkgreen;
+    border: .5px solid lightgrey;
+    background-color: darkseagreen;
+    padding: 1em 2em;
+    margin: 10px 10px;
+
+}
+
+#warning {
+    color: darkgoldenrod;
+    border: .5px solid lightgrey;
+    background-color: lightgoldenrodyellow;
+    padding: 1em 2em;
+    margin: 10px 10px;
+}
+
+#error {
+    color: darkred;
+    border: .5px solid lightgrey;
+    background-color: lightcoral;
+    padding: 1em 2em;
+    margin: 10px 10px;
+}
