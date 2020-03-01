@@ -6,7 +6,33 @@
 </head>
 <body>
 
-<script> src="js/if-else.js"</script>
+<script> src="js/if-else.js"
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var color = colors[Math.floor(Math.random()*colors.length)];
+
+var favorite = 'blue';
+if(color === 'red') {
+    console.log("Apples are red.");
+
+} else if (color === 'orange') {
+    console.log("Oranges are orange.");
+
+}else if (color === 'yellow') {
+    console.log("Daises are yellow.");
+
+}else if (color === 'green') {
+    console.log("Grass is green.");
+
+}else if (color === 'blue') {
+    console.log("The sky is blue.");
+
+}else {
+    console.log("I do not know anything by that color.");
+
+}
+
+(color === favorite) ? console.log(color + " is my favorite color") : console.log(color + " is not my favorite color!");
+</script>
 
 
 </body>
