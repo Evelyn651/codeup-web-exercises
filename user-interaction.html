@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Interaction JS</title>
+</head>
+<body>
+<script>
+
+    console.log("Before prompt...");
+
+    var userName = "";
+    while (userName === ""){
+        userName = prompt("Hi, what is your name?")
+    }
+    console.log('Hi ' +userName + ' nice to meet you!');
+
+    console.log("After prompt.");
+
+    console.log("Before confirm...");
+    var response = confirm("Do you like pizza?");
+
+    if (response) {
+        alert("Awesome! I like pizza too!");
+    } else {
+        alert("To each his own.")
+    }
+    console.log("After confirm.");
+    alert("Thanks for sharing that with me!")
+</script>
+
+</body>
+</html>
