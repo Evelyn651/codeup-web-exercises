@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planets Array JS</title>
+</head>
+<body>
+<script>
+    var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus','Neptune'];
+    function logPlanets() {
+        console.log("Here is the list of planets:");
+        console.log(planets);
+        console.log("---- ---- ---- ----");
+    }
+
+    logPlanets();
+    planets.splice('Mercury', 0, 'Sun');
+
+    console.log('Adding "The Sun" to the beginning of the planets array.');
+    planets.push('Pluto');
+    index = planets.indexOf('Earth')
+    console.log(index);
+
+
+</script>
+
+</body>
+</html>
