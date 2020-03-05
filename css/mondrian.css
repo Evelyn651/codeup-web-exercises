@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+}
+
+main {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(8,25%);
+    grid-template-rows: repeat(8, 25%);
+
+}
+
+div {
+    border: 8px solid black;
+}
+
+.darkblue1-box {
+    grid-area: 1/ 1/ 3/ 3;
+    background-color: darkblue;
+}
+.darkyellow1-box {
+    grid-area: 3/ 1/ 6 /3;
+    background-color: darkgoldenrod;
+}
+.white1-box {
+    grid-area: 6/ 1/ 8/ 3;
+    background-color: ivory;
+}
+.darkred1-box {
+    grid-area: 8/ 1/ 9/ 3;
+    background-color: darkred;
+}
+.darkred2-box {
+    grid-area: 1/ 3/ 4/ 9;
+    background-color: darkred;
+}
+.white2-box {
+    grid-area: 4/ 3/ 8/ 5;
+    background-color: ivory;
+}
+.darkblue2-box {
+    grid-area: 8/ 3/ 9/ 9;
+    background-color: darkblue;
+}
+.white3-box {
+    grid-area: 4/ 5/ 6/ 9;
+    background-color: ivory;
+}
+.darkyellow2-box {
+    grid-area: 6/ 5/ 8/ 9;
+    background-color: darkgoldenrod;
+}
