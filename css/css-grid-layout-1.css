@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+.layout1-wrapper {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: 20% 1fr 15% ;
+    grid-template-rows: 4em 1fr 4em;
+    width:100vw;
+    height: 100vh;
+
+
+}
+
+.layout1-header {
+    background-color: darkgoldenrod;
+    grid-area: 1/1/2/4;
+    padding: 8px;
+}
+.layout1-nav {
+    background-color: darkgoldenrod;
+    grid-area: 2/1/11/2;
+    padding: 8px;
+}
+.layout1-article {
+    background-color: darkgoldenrod;
+    grid-area: 2/2/10/3;
+    padding: 8px;
+}
+
+.layout1-ads {
+    background-color: darkgoldenrod;
+    grid-area: 2/3/10/4;
+    padding: 8px;
+}
+
+.layout1-footer {
+    background-color: darkgoldenrod;
+    grid-area: 10/2/11/4;
+    padding: 8px;
+}
+
