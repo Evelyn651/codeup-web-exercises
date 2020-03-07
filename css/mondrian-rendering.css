@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 2px solid black;
 }
 
 body {
@@ -7,32 +8,28 @@ body {
 }
 
 .bonus-container {
-    display: inline-grid;
-    width: 333vh;
-    height: 333vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    background-color: black;
+    grid-gap: 15px;
+
 }
 
-main .bonus-container {
-    display: inline-grid;
-    flex-direction: column;
-    grid-gap: 4px;
-    /*background-color: black;*/
-}
 
- .bonus-container .ivory1 {
-    /*grid-area: 1/1/3/5;*/
-    grid-row: 1/span 2;
-    background-color: yellow;
+.ivory1 {
+    grid-area: 1/1/3/4;
+    background-color: ivory;
   }
 .ivory2 {
-    grid-area: 3/1/7/7;
+    grid-area: 3/1/7/3;
     background-color: ivory;
 }
 
 .ivory3 {
-    grid-area: 7/1/3/3;
+    grid-area: 7/1/13/3;
     background-color: ivory;
 }
 
@@ -42,7 +39,7 @@ main .bonus-container {
 }
 
 .bonus-darkred-middle {
-    grid-area: 3/3/11/11;
+    grid-area: 3/3/11/10;
     background-color: darkred;
 }
 
@@ -52,17 +49,22 @@ main .bonus-container {
 }
 
 .ivory4 {
-    grid-area: 15/3/17/7;
+    grid-area: 1/4/3/10;
     background-color: ivory;
 }
 
 .ivory5 {
-    grid-area: 11/7/13/11;
+    grid-area: 15/3/17/7;
     background-color: ivory;
 }
 
 .ivory6 {
-    grid-area: 13/7/15/11;
+    grid-area: 11/7/13/10;
+    background-color: ivory;
+}
+
+.ivory7 {
+    grid-area: 16/ 7/ 17/ 15;
     background-color: ivory;
 }
 
@@ -71,6 +73,49 @@ main .bonus-container {
     background-color: black;
 }
 
-.
+
+
+.ivory8 {
+    grid-area: 7/10/11/12;
+    background-color: ivory;
+}
+
+.bonus-yellow-top-right{
+    grid-area: 1/10/3/15;
+    background-color: darkgoldenrod;
+}
+
+.bonus-yellow-second-top-right {
+    grid-area: 3/10/7/15;
+    background-color: darkgoldenrod;
+}
+
+.ivory9 {
+    grid-area: 7/ 12/ 11/ 15;
+    background-color: ivory;
+}
+
+.ivory10 {
+    grid-area: 11/ 10/ 13/ 15;
+    background-color: ivory;
+}
+
+.only-bluebox {
+    grid-area: 13/ 10/ 16/ 15;
+    background-color: darkblue;
+}
+
+.ivory11 {
+    grid-area: 1/15/13/17;
+    background-color: ivory;
+}
+
+.bonus-darkred-bottom-right {
+    grid-area: 13/15/17/17;
+    background-color: darkred;
+}
+
+/*I FINISHED!!! :) */
+
 
 
