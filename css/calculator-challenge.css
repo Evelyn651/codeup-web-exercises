@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    background-color: darkgoldenrod;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(13, 1fr);
+    width: 15em;
+    height: 20em;
+    border: 2px solid black;
+}
+
+.number-screen {
+    grid-area:1/1/4/5;
+    background-color: black;
+}
+
+.clear-button {
+    grid-area: 4/1/6/2;
+    background-color: ivory;
+    text-align: center;
+}
+
+.positive-or-negative {
+    grid-area: 4/2/6/3;
+    background-color: ivory;
+    text-align: center;
+
+}
+
+.percent-button {
+    grid-area: 4/3/6/4;
+    background-color: ivory;
+    text-align: center;
+}
+
+.division-button {
+    grid-area: 4/4/6/5;
+    background-color: darkorange;
+    text-align: center;
+}
+
+.number7 {
+    grid-area: 6/1/8/2;
+    background-color: ivory;
+    text-align: center;
+}
+
+.number8 {
+    grid-area: 6/2/8/3;
+    background-color: ivory;
+    text-align: center;
+}
+
+.number9 {
+    grid-area: 6/3/8/4;
+    background-color: ivory;
+    text-align: center;
+}
+
+.multiply-button {
+    grid-area: 6/4/8/5;
+    background-color: darkorange;
+    text-align: center;
+}
+
+.number4 {
+    grid-area: 8/1/10/2;
+    background-color: ivory;
+    text-align: center;
+}
+
+.number5 {
+    grid-area: 8/2/10/3;
+    background-color: ivory;
+    text-align: center;
+}
+
+.number6 {
+    grid-area: 8/3/10/4;
+    background-color: ivory;
+    text-align: center;
+}
+
+.subtract-button {
+    grid-area: 8/4/10/5;
+    background-color: darkorange;
+    text-align: center;
+}
+
+.number1 {
+    grid-area: 10/1/12/2;
+    background-color: ivory;
+    text-align: center;
+}
+
+.number2 {
+    grid-area: 10/2/12/3;
+    background-color: ivory;
+    text-align: center;
+}
+
+.number3 {
+    grid-area: 10/3/12/4;
+    background-color: ivory;
+    text-align: center;
+}
+
+.plus-button {
+    grid-area: 10/4/12/5;
+    background-color: darkorange;
+    text-align: center;
+}
+
+.number0 {
+    grid-area: 12/1/14/3;
+    background-color: ivory;
+    text-align: center;
+}
+
+.decimal {
+    grid-area: 12/3/14/4;
+    background-color: ivory;
+    text-align: center;
+}
+
+.equals {
+    grid-area: 12/4/14/5;
+    background-color: darkorange;
+    text-align: center;
+}
