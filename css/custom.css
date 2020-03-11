@@ -13,7 +13,9 @@ nav a:hover {
     padding: 0;
 }
 
-
+.list-group {
+    text-align: left;
+}
 
 #main-jumbo {
     background-image: url("../imgs/pizza.png");
@@ -30,6 +32,18 @@ nav a:hover {
 
 .header {
      background-color: lightgray;
+}
+
+.card-header{
+    text-align: left;
+    background-color: blue;
+    color: white;
+}
+
+
+
+.card-footer {
+    text-align: right;
 }
 
 
