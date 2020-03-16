@@ -121,12 +121,27 @@
     //Create a function to that returns a random item form an array.
 
     function getRandomItem(array) {
-            return array[getRandomNumber()];
+        var randomIndex = getRandomNumber();
+            return array[randomIndex];
 
     }
 
 
     console.log('getRandomItem(classmatesArray): ', getRandomItem(classmatesArray));
+
+    //Exercise 18
+    //Create a function that prints a list of names randomly from the apex array.
+    //TODO: Make sure that there are no duplicates.
+    function generateMicrowaveList() {
+        //main problem to solve: only 1 item at a time
+        for (var x = 0; x < classmatesArray.length; x++){
+            console.log('Index:' + x + '' + getRandomItem(classmatesArray));
+        }
+    }
+
+    generateMicrowaveList();
+
+
 
 
 
