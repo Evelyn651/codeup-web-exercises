@@ -43,7 +43,7 @@ if (currentBalance > itemCost) {
 
 
 var isAdmin = true;
-if(isAdmin) {
+if (isAdmin) {
     //If true run this code.
     console.log("Displaying admin navbar.")
 } else {
@@ -53,7 +53,7 @@ if(isAdmin) {
 
 var numberOfLives = 0;
 
-if(numberOfLives === 0) {
+if (numberOfLives === 0) {
     //alert("Game Over :(");
 } else {
     //alert("Next Level!");
@@ -61,7 +61,7 @@ if(numberOfLives === 0) {
 
 //Refactor number of lives into a function
 function checkIfGameOver(numberOfLives) {
-    if(numberOfLives === 0) {
+    if (numberOfLives === 0) {
         return "Sorry, game over. :(";
     } else {
         return "Next level!";
@@ -81,18 +81,18 @@ function checkIfGameOver(numberOfLives) {
 // }
 
 var weather = "raining";
-if (weather === "snowing"){
+if (weather === "snowing") {
     alert("Stay inside!");
-} else if(weather === "raining"){
+} else if (weather === "raining") {
     //alert("Get an umbrella.");
 } else {
     //alert("You are good to go. Enjoy the weather.");
 }
 
 function checkWeather(weather) {
-    if (weather === "snowing" || weather === "hailing"){
+    if (weather === "snowing" || weather === "hailing") {
         return "Stay inside!";
-    } else if(weather === "raining"){
+    } else if (weather === "raining") {
         return "Get an umbrella.";
     } else {
         return "You are good to go. Enjoy the weather.";
@@ -104,19 +104,43 @@ console.log(checkWeather("raining"));
 console.log(checkWeather("sunny"));
 console.log(checkWeather("hailing"));
 
-var pizzaPreference = prompt("What kind of pizza do you like?").toLocaleLowerCase();
+// var pizzaPreference = prompt("What kind of pizza do you like?").toLocaleLowerCase();
+//
+// if (pizzaPreference === "pepperoni") {
+//     //alert("What a coincidence, I love that one too.")
+// } else if (pizzaPreference === "pineapple and hot sauce"){
+//     //alert("That is a spicy pizza.")
+// } else if (pizzaPreference === "steak"){
+//    // alert("Steak is great!");
+// } else if (pizzaPreference === "cheese"){
+//     //alert("Plain cheese is okay.");
+// } else {
+//     //alert(pizzaPreference + " isn't my favorite, but let's order some.");
+//}
 
-if (pizzaPreference === "pepperoni") {
-    //alert("What a coincidence, I love that one too.")
-} else if (pizzaPreference === "pineapple and hot sauce"){
-    //alert("That is a spicy pizza.")
-} else if (pizzaPreference === "steak"){
-   // alert("Steak is great!");
-} else if (pizzaPreference === "cheese"){
-    //alert("Plain cheese is okay.");
-} else {
-    //alert(pizzaPreference + " isn't my favorite, but let's order some.");
+//As a switch statement
+
+var pizzaPreference = prompt("What kind of pizza do you like?").toLocaleLowerCase();
+var pizzaConfirmation;
+
+switch (pizzaPreference) {
+    case "pepperoni":
+        pizzaConfirmation = "What a coincidence, I love that too.";
+        break;
+    case "pineapple and hot sauce":
+        pizzaConfirmation = "That's a spicy pizza.";
+        break;
+    case "steak":
+        pizzaConfirmation = "Steak is great.";
+        break;
+    case "cheese": pizzaConfirmation = "Plain cheese is okay!";
+        break;
+    default:
+        pizzaConfirmation = pizzaPreference + " isn't my favorite, but let's order some.";
+        break;
+
 }
+
 
 var userAge = 17;
 var hasPermit = true;
@@ -149,3 +173,14 @@ message = (success) ? "Operation was successful." : "Oops, something went wrong.
 
 console.log(message);
 
+var weather = "sunny";
+var weatherMessage = (weather === "rainy" ? "It's raining!" : "Have a nice day! :)");
+
+// if (weather === "rainy"){
+//     weatherMessage = "It's raining!";
+// } else{
+//     weatherMessage = "Have a nice day. :)";
+// }
+
+
+console.log(weatherMessage);
