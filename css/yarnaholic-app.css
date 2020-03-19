@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding:0;
+    background-color: #DCE0D9;
+}
+
+.main-header{
+    margin: 0;
+    background-color: #254E70;
+    color: #DCE0D9;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.yarn-ball{
+    width: 55px;
+    height: 40px;
+}
+
+.motto{
+    background-color: #37718E;
+    color: #DCE0D9;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+
+}
