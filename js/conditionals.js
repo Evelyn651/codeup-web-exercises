@@ -12,31 +12,76 @@
  *
  * Can you refactor your code to use functions?
  */
-confirm("Would you like to enter a number?");
 
-var number = prompt("Enter a number.");
-var newSum = parseInt(number) + 100;
-
-if (number%2 === 0){
-    alert("The number " + parseInt(number) + " is even.")
-} else if(number&1){
-    alert("The number " + parseInt(number) + " is odd.")
+//My solution.
+//
+// confirm("Would you like to enter a number?");
+//
+// var number = prompt("Enter a number.");
+// var newSum = parseInt(number) + 100;
+//
+// if (number%2 === 0){
+//     alert("The number " + parseInt(number) + " is even.")
+// } else if(number&1){
+//     alert("The number " + parseInt(number) + " is odd.")
+// } else if (newSum){
+//     alert("The new sum is " + newSum);
+// } else if (newSum < 0){
+//     alert("The new sum is negative.");
+// }else if(newSum > 0){
+//     alert("The new sum is positive.");
+// } else if(isNaN(number)){
+//     alert("This is not a number.")
+// }
+//  console.log(newSum);
+//########################################################################//
+//
+//Douglas' solution, original and refactored.
+//
+//Prompt user for a number. Will return the number of NaN of they don't enter a number.
+function promptForNumber() {
+    var numberInput = prompt("Please enter a number.");
+    return parseInt(numberInput);
 }
 
-if (newSum){
-    alert("The new sum is " + newSum);
+//Takes a number and returns the text even or odd depending on the number.
+function evenOrOdd(aNumber) {
+    if(aNumber % 2 === 0){
+        return "even";
+    } else {
+        return "odd";
+    }
 }
 
-if (newSum < 0){
-    alert("The new sum is negative.");
-}else if(newSum > 0){
-    alert("The new sum is positive.");
+//What the number plus 100 is.
+
+function plus100(aNumber){
+    return aNumber + 100;
 }
 
-if(isNaN(number)){
-    alert("This is not a number.")
+//Take a number and return the text "negative" or "positive" depending on the number.
+function negativeOrPositive(aNumber){
+    return (aNumber >= 0) ? "positive" : "negative";
 }
-// console.log(typeof(Math.sign(newSum)));
+
+var isEnteringNumber = confirm("Would you like to enter a number?");
+
+if(isEnteringNumber) {
+    var numberInput = prompt("Please enter a number.");
+    var parsedNumber = parseInt(numberInput);
+
+    if (isNaN(parsedNumber)) {
+        alert("This is not a number.");
+    } else {
+        // var evenOrOdd = (parsedNumber % 2 === 0) ? "even" : "odd";
+        alert("The number is " + evenOrOdd(parsedNumber));
+        // var plus100 = parsedNumber + 100;
+        alert("The number plus 100 is " + plus100(parsedNumber));
+        // var negativeOrPositive = (parsedNumber >= 0) ? "positive" : "negative";
+        alert("The number is " + negativeOrPositive(parsedNumber));
+
+    }
+}
 
 
 /* ########################################################################## */
