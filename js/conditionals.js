@@ -162,8 +162,8 @@ switch(randomColor){
  * Alert the return value from your function to show it to the user.
  */
 
-// prompt("What's your favorite color?");
-// alert("An interesting color " + analyzeColor("red") + " is.");
+//var colorInput = prompt("Please enter a color.");
+//alert(analyzeColor(colorInput));
 
 
 /* ########################################################################## */
@@ -187,6 +187,29 @@ switch(randomColor){
  * return value.
  */
 
+function calculateTotal(luckyNumber, totalBill){
+    if (luckyNumber === 0 || luckyNumber > 5){
+        return totalBill;
+    } else if(luckyNumber === 1){
+        return totalBill * .90;
+    } else if (luckyNumber === 2){
+        return totalBill * .75;
+    }else if (luckyNumber === 3){
+        return totalBill * .65;
+    }else if (luckyNumber === 4){
+        return totalBill * .50;
+    }else if (luckyNumber === 5){
+        return 0;
+    }
+}
+console.log('calculateTotal(0, 100)', calculateTotal(0, 100));
+console.log('calculateTotal(0, 100)', calculateTotal(1, 100));
+console.log('calculateTotal(0, 100)', calculateTotal(2, 100));
+console.log('calculateTotal(0, 100)', calculateTotal(3, 100));
+console.log('calculateTotal(0, 100)', calculateTotal(4, 100));
+console.log('calculateTotal(0, 100)', calculateTotal(5, 100));
+console.log('calculateTotal(0, 100)', calculateTotal(6, 100));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -194,5 +217,6 @@ switch(randomColor){
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+//Generate a random number between 0 and 6
+var luckyNumber = Math.floor(Math.random() * 6);
+
