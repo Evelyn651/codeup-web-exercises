@@ -101,17 +101,20 @@ if(isEnteringNumber) {
  */
 
 function analyzeColor(colorName){
-    if ("blue" === colorName){
-        return "blue is the color of the sky."
-    } else if ("red" === colorName){
-        return "Strawberries are red."
-    }else if("cyan" === colorName){
-        return "I don't know anything about cyan."
+    if (colorName === "blue"){
+        return colorName + " is the color of the sky."
+    } else if (colorName === "red"){
+        return "Strawberries are " + colorName + " ."
+    }else if(colorName === "cyan"){
+        return "I don't know anything about " + colorName + " ."
+    } else {
+        return colorName + " is not valid."
     }
 }
 console.log(analyzeColor("blue"));
 console.log(analyzeColor("red"));
 console.log(analyzeColor("cyan"));
+console.log(analyzeColor("gray"));
 
 
 // Don't change the next two lines!
@@ -159,8 +162,8 @@ switch(randomColor){
  * Alert the return value from your function to show it to the user.
  */
 
-prompt("What's your favorite color?");
-alert("An interesting color " + analyzeColor("red") + " is.");
+// prompt("What's your favorite color?");
+// alert("An interesting color " + analyzeColor("red") + " is.");
 
 
 /* ########################################################################## */
