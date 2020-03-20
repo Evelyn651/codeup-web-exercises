@@ -39,8 +39,8 @@
 //Douglas' solution, original and refactored.
 //
 //Prompt user for a number. Will return the number of NaN of they don't enter a number.
-function promptForNumber() {
-    var numberInput = prompt("Please enter a number.");
+function promptForNumber(message) {
+    var numberInput = prompt(message);
     return parseInt(numberInput);
 }
 
@@ -60,28 +60,28 @@ function plus100(aNumber){
 }
 
 //Take a number and return the text "negative" or "positive" depending on the number.
-function negativeOrPositive(aNumber){
-    return (aNumber >= 0) ? "positive" : "negative";
-}
-
-var isEnteringNumber = confirm("Would you like to enter a number?");
-
-if(isEnteringNumber) {
-    var numberInput = prompt("Please enter a number.");
-    var parsedNumber = parseInt(numberInput);
-
-    if (isNaN(parsedNumber)) {
-        alert("This is not a number.");
-    } else {
-        // var evenOrOdd = (parsedNumber % 2 === 0) ? "even" : "odd";
-        alert("The number is " + evenOrOdd(parsedNumber));
-        // var plus100 = parsedNumber + 100;
-        alert("The number plus 100 is " + plus100(parsedNumber));
-        // var negativeOrPositive = (parsedNumber >= 0) ? "positive" : "negative";
-        alert("The number is " + negativeOrPositive(parsedNumber));
-
-    }
-}
+// function negativeOrPositive(aNumber){
+//     return (aNumber >= 0) ? "positive" : "negative";
+// }
+//
+// var isEnteringNumber = confirm("Would you like to enter a number?");
+//
+// if(isEnteringNumber) {
+//     var numberInput = prompt("Please enter a number.");
+//     var parsedNumber = parseInt(numberInput);
+//
+//     if (isNaN(parsedNumber)) {
+//         alert("This is not a number.");
+//     } else {
+//         // var evenOrOdd = (parsedNumber % 2 === 0) ? "even" : "odd";
+//         alert("The number is " + evenOrOdd(parsedNumber));
+//         // var plus100 = parsedNumber + 100;
+//         alert("The number plus 100 is " + plus100(parsedNumber));
+//         // var negativeOrPositive = (parsedNumber >= 0) ? "positive" : "negative";
+//         alert("The number is " + negativeOrPositive(parsedNumber));
+//
+//     }
+// }
 
 
 /* ########################################################################## */
@@ -219,4 +219,10 @@ console.log('calculateTotal(0, 100)', calculateTotal(6, 100));
  */
 //Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
+var parsedNumber = promptForNumber("Please enter your total bill");
+// console.log("typeof parsedNumber", typeof parsedNumber);
 
+var finalTotal = calculateTotal(luckyNumber, parsedNumber);
+alert("Your lucky number is " + luckyNumber);
+alert("Total before discount is " + parsedNumber);
+alert("Total after discount is " + finalTotal);
