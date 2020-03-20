@@ -38,7 +38,7 @@ if (currentBalance > itemCost) {
 // if (condition){
 // code here runs if condition evaluates to true
 // } else {
-//     // code runs here if condition evalustes to false
+//     // code runs here if condition evaluates to false
 // }
 
 
