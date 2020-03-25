@@ -1,28 +1,30 @@
-//2-- ?
-function showMultiplicationTable(aNumber){
-    for(var aNumber = 1; i <= 10; i++){
-        if (i = 1 * aNumber){
-            console.log("Iteration: " + i);
-        }
+// //2-- ? it was a lot simpler than i thought.
+function showMultiplicationTable(input){
+    for(var i = 1; i <= 10; i++){
+        var answer = input * i;
+
+        console.log(input + ' x ' + i + ' = ' + answer);
     }
 }
 
+showMultiplicationTable(7);
 
 
 //3
-for (var i = 20; i <= 200; Math.floor(Math.random() * 20) + i++){
-
-    if(i % 2 === 0){
-        console.log(i + " is even");
+for (var i = 0; i < 10; i++){
+    var randomNumber = Math.floor(Math.random() * 180) + 20;
+    if(randomNumber % 2 === 0){
+        console.log(randomNumber + " is even");
     }else{
-        console.log(" " + i + " is odd");
+        console.log(randomNumber + " is odd");
     }
 
 }
 
 //4
 for (var i = 1; i < 10; i++){
-        console.log("exercise 4: ", String(i + " ").repeat(i));
+        // console.log("exercise 4: ", String(i + " ").repeat(i));
+    console.log(i.toString().repeat(i));
 }
 
 
