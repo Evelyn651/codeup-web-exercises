@@ -14,7 +14,7 @@
 
     //Exercise 2
     //Create an array with the names of five of your favorite foods.
-    var favoriteFoods= ["fruits", "pasta", "fish", "taters", "vegetables"]
+    var favoriteFoods = ["fruits", "pasta", "fish", "taters", "vegetables"]
     console.log(favoriteFoods);
 
     //Exercise 3
@@ -40,7 +40,7 @@
     //Exercise 7
     //Sort favorite food array in reverse alphabetical order.
     favoriteFoods.reverse();
-    console.log('used reverse after sorting favorite foods in order to get lists alphabetically revered.',favoriteFoods);
+    console.log('used reverse after sorting favorite foods in order to get lists alphabetically revered.', favoriteFoods);
 
     //Exercise 8
     //Create a new array of fruits and add the array to the end of your favorite foods array.
@@ -53,6 +53,7 @@
     function sayHello(name) {
         return "Hello, " + name + "!";
     }
+
     console.log(sayHello("Evelyn"));
 
     //Exercise 10
@@ -60,6 +61,7 @@
     function firstItem(array) {
         return array[0];
     }
+
     console.log(firstItem(favoriteFoods));
 
     //Exercise 11 Create a function that returns the type of the value you enter in the input parameter of the function.
@@ -67,6 +69,7 @@
     function checkType(aValue) {
         return typeof aValue;
     }
+
     console.log('checkType(1) :' + checkType(1));
     console.log('checkType(\'Apex\') :' + checkType('APex'));
     console.log('checkType(true) :' + checkType(true));
@@ -75,13 +78,13 @@
     //Create a function that takes in an array of values and console.logs the data type of each. Practice with loops.
 
     function checkTypes(anArray) {
-        for (var x = 0; x < anArray.length; x++ ) {
+        for (var x = 0; x < anArray.length; x++) {
             // console.log('x: '+ x);
-           console.log( checkType(anArray[x]));
+            console.log(checkType(anArray[x]));
         }
     }
 
-    checkTypes ([2,'Fer', false])
+    checkTypes([2, 'Fer', false])
 
     //Exercise 13
     //Write a function called isString that accepts a single input, and returns true if the data type is a string or false if it is not a string
@@ -90,6 +93,7 @@
         return checkType(item) === "string";
 
     }
+
     console.log('isString(true)' + isString(true)); //returns false
     console.log('isString("hello")' + isString("hello")); //returns true
 
@@ -122,7 +126,7 @@
 
     function getRandomItem(array) {
         var randomIndex = getRandomNumber();
-            return array[randomIndex];
+        return array[randomIndex];
 
     }
 
@@ -131,23 +135,27 @@
 
     //Exercise 18
     //Create a function that prints a list of names randomly from the apex array.
+    //TODO: getRandomNumber should get a number between 0 and 15.
     //TODO: Make sure that there are no duplicates.
-    function generateMicrowaveList() {
+    function getRandomFromRange(min, max) {
         //main problem to solve: only 1 item at a time
-        for (var x = 0; x < classmatesArray.length; x++){
-            console.log('Index:' + x + '' + getRandomItem(classmatesArray));
-        }
+        return Math.random() * (max - min) + min;
     }
 
+     function generateMicrowaveList(){
+
+    var remainingClassmates = classmatesArray.slice[0];
+    //for (var x = 0; x < classmatesArray.length; x++);{
+    classmatesArray.forEach(function (classmate) {
+        classmatesArray.shift();
+        remainingClassmates = classmatesArray;
+        console.log(classmate);
+    });
+    // var turn = classmatesArray.shift();
+    // console.log('student: ', turn);
+
+    };
     generateMicrowaveList();
-
-
-
-
-
-
-
-
 </script>
 
 </body>
