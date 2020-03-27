@@ -18,7 +18,7 @@ console.log("Welcome to my Website!");
 
 // var littleMerMaid = prompt("How do many days do you want to rent The Little Mermaid?");
 // var brotherBear = prompt("How do many days do you want to rent Brother Bear?");
-// var hercules = prompt("How do many days do you want tto rent Hercules?");
+// var hercules = prompt("How do many days do you want to rent Hercules?");
 //
 // var rentalTotal = (
 //     parseInt(littleMerMaid) +
