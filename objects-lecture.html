@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    "use strict";
+
+    var cars= [];
+    var ferCar = {
+        make: "Toyota",
+        model: "Camry",
+        price: 25000,
+        year: 2014,
+        features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
+        owner:{
+            name: "Fernando Mendoza",
+            age: 29
+        }
+    };
+    var douglasCar = {
+        make: "Toyota",
+        model: "Avalon",
+        price: 24000,
+        year: 2015,
+        features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
+
+    };
+
+    cars.push(ferCar);
+    cars.push(douglasCar);
+
+    douglasCar.features = ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"];
+    douglasCar["owner"] = {name: prompt("what is the owners name?"), age: prompt("what is the owners age?")};
+
+    cars.forEach(function(aCar){
+        console.log(aCar.make + " " + aCar.model + " cost: " + aCar.price + " " + aCar.features + " " + aCar.owner);
+    });
+
+
+</script>
+</body>
+</html>
