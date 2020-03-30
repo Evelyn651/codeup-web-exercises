@@ -21,6 +21,12 @@
         owner:{
             name: "Fernando Mendoza",
             age: 29
+        },
+        honk: function(){
+            alert("Honk!!!");
+        },
+        conputerLog: function (){
+            console.log("---" + this.make + "---" + this.model + "---");
         }
     };
     var douglasCar = {
@@ -29,6 +35,8 @@
         price: 24000,
         year: 2015,
         features: ["Automatic Windows", "Great Gas Mileage", "AM/FM Radio"],
+
+
 
     };
 
@@ -42,6 +50,37 @@
         console.log(aCar.make + " " + aCar.model + " cost: " + aCar.price + " " + aCar.features + " " + aCar.owner);
     });
 
+    //2nd example
+
+    var ferContact = {
+        name: "fer mendoza",
+        phoneNumber: 1234567890
+    };
+
+    var aContact = {
+        name: prompt("Name?"),
+        phoneNumber: prompt("Number?")
+    };
+
+    var phone = {
+        screenSize: 5.1,
+        price: 500.99,
+        brand: "Apple",
+        color: "blue",
+        storageSize: 128,
+        contacts: [ferContact, aContact],
+        call: function(number){
+            console.log("calling..." + number);
+        }
+    };
+    //print the name of the first contact
+    console.log(phone.contacts[0].name);
+    console.log(phone.contacts[0].phoneNumber);
+
+    //make a call
+    phone.call(phone.contacts[1].phoneNumber);
+
+    Array.
 
 </script>
 </body>
