@@ -49,3 +49,5 @@ setTimeout(intervalFunction, 5000);
 setTimeout(function(){
     console.log('Hello one second from the page load.');
 }, 1000);
+
+clearInterval(interval);
