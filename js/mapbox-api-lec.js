@@ -29,13 +29,13 @@ console.log('token: ' + mapboxToken);
 
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
 
-mapboxgl.accessToken = mapboxToken;
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    center: [-96.8057, 32.7787],
-    zoom: 16
-});
+// mapboxgl.accessToken = mapboxToken;
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/satellite-streets-v11',
+//     center: [-96.8057, 32.7787],
+//     zoom: 16
+// });
 
 
 /**********************************************
@@ -53,12 +53,12 @@ var markerOptions = {
     color: "teal",
     draggable: "true"
 };
-var marker = new mapboxgl.Marker(markerOptions)
-    .setLngLat([-96.8057, 32.7787])
-    .addTo(map);
-var markerMuseum = new mapboxgl.Marker(markerOptions)
-    .setLngLat([-96.8084, 32.7799])
-    .addTo(map);
+// var marker = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-96.8057, 32.7787])
+//     .addTo(map);
+// var markerMuseum = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-96.8084, 32.7799])
+//     .addTo(map);
 
 
 
@@ -82,11 +82,11 @@ var markerMuseum = new mapboxgl.Marker(markerOptions)
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
-var popup = new mapboxgl.Popup()
-    .setHTML("<h1>Codeup Rocks!</h1>")
-    .addTo(map);
-
-marker.setPopup(popup);
+// var popup = new mapboxgl.Popup()
+//     .setHTML("<h1>Codeup Rocks!</h1>")
+//     .addTo(map);
+//
+// marker.setPopup(popup);
 
 
 
@@ -99,6 +99,8 @@ var popupMuseum = new mapboxgl.Popup()
 markerMuseum.setPopup(popupMuseum);
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
+
+
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
 
 
@@ -111,6 +113,15 @@ markerMuseum.setPopup(popupMuseum);
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
+geocode("701 Commerce St. Dallas, TX, 75202", mapboxToken).then(function(result) {
+    console.log(result);
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        center: result,
+        zoom: 16
+    });
+});
 
 
 
@@ -119,6 +130,7 @@ markerMuseum.setPopup(popupMuseum);
 //TODO: Instead of setCenter try using map.jumpTo()
 //TODO: Instead of setCenter try using map.flyTo()
 
+map.setMarker
 
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musume
@@ -127,4 +139,5 @@ markerMuseum.setPopup(popupMuseum);
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
 
+reverse
 
