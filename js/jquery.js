@@ -9,8 +9,12 @@ function activateEasterEgg() {
     var yodaAudio = new Audio('imgs/strong with the force.mp3');
     yodaAudio.play();
 
-    // var lightsaberAudio = new Audio ('imgs/Lightsabers.mp3');
-    // lightsaberAudio.play();
+    $(document).click(function (e) {
+        var lightsaberAudio = new Audio ('imgs/Lightsabers.mp3');
+        lightsaberAudio.play();
+    });
+
+    //
 
 
     alert("WAIT FOR IT...........................................");
