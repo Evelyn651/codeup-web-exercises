@@ -1,8 +1,16 @@
 function activateEasterEgg() {
     document.body.style.backgroundImage = "url('imgs/baby-yoda-force.jpeg')";
+
+    alert("WAIT FOR IT...........................................");
+
     $(document).click(function (e) {
         alert('THE REBELS ARE HERE!!!');
         document.body.style.backgroundImage = "url('imgs/obi-and-anakin.jpg')";
+
+        // $(document).keyup(function(e){
+        //     alert('UH OH...........WHO IS THAT?!?!?!');
+        //     document.body.style.backgroundImage = "url(imgs/darth-vader.jpg')";
+        // })
 
     });
 
@@ -14,10 +22,10 @@ function activateEasterEgg() {
         lightsaberAudio.play();
     });
 
-    //
-
-
-    alert("WAIT FOR IT...........................................");
+    // $(document).keydown(function (e) {
+    //     var darthVaderAudio = new Audio('imgs/Darth Vader breathing.mp3');
+    //     darthVaderAudio.play();
+    // });
 
 }
 
@@ -37,9 +45,9 @@ function activateEasterEgg() {
     document.addEventListener('keydown', function (e) {
         var key = keysUsed[e.keyCode];
         var requiredKey = codeSequence[codeSequencePosition];
-        if(key == requiredKey){
+        if(key === requiredKey){
             codeSequencePosition++;
-            if(codeSequencePosition == codeSequence.length){
+            if(codeSequencePosition === codeSequence.length){
                 activateEasterEgg();
                 codeSequencePosition = 0;
             }
