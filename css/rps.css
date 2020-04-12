@@ -5,13 +5,13 @@
     grid-template-columns: 50% 50%;
 }
 
-#rps-you,#rps-comp {
+#rps-you,#rps-com {
     padding: 15px;
     text-align: center;
 }
 
 /*ROCK/PAPER/SCISSORS IMAGE*/
-#rps-your-move, #rps-comp-move {
+#rps-your-move, #rps-com-move {
     height: 200px;
     margin-bottom: 10px;
 }
