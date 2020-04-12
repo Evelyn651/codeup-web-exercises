@@ -22,4 +22,14 @@ var plantNeedsWater = function(day){
 console.log(plantNeedsWater('Tuesday'));
 
 //9- Arrow Functions
+//without the keyword function and using the arrow to make it a function
 
+var plantsNeedWater = (day) => {
+    if(day === 'Wednesday'){
+        return true;
+    }else {
+        return false;
+    }
+};
+
+console.log(plantsNeedWater('Friday'));
