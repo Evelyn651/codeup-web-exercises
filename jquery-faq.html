@@ -81,10 +81,11 @@
 </script>
 <script>
     $(document).ready(function(){
+
         $('#display-dd').click(function(event){
             event.preventDefault();
-            $('dd').toggleAttribute('invisible');
-            if($('dd')[0].className !== 'invisible'){
+            $('dd').toggleClass("invisible");
+            if($('dd')[0].className !== "invisible"){
                 $(this).text('Hide facts')
             }else{
                 $(this).text('Show facts')
@@ -93,7 +94,7 @@
         });
 
         $('dt').click(function(){
-            $(this).toggleAttribute('highlight');
+            $(this).toggleClass('highlight');
         });
 
 
