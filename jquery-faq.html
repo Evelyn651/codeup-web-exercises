@@ -29,6 +29,10 @@
 </head>
 <body>
 
+<div>
+    <h1 id="newsletter-header">Would you like to sign up for our newsletter?</h1>
+    <span id="hide-div">X</span>
+</div>
 
 <p>10 FAQs About National Parks</p>
 
@@ -137,6 +141,11 @@
             // li --> ul -> lis of ul > first
             $(this).parent().children().first().toggleClass('first-item-highlight')
             //or $(this).parent().children().first().css('color', 'blue');
+        });
+
+        //Effects exercise
+        $('#hide-div').click(function(){
+           $(this).parent().hide();
         });
 
 
