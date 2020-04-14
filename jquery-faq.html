@@ -17,6 +17,14 @@
         dt {
             cursor: pointer;
         }
+
+        .bold-font{
+            font-weight: bold;
+        }
+
+        .first-item-highlight {
+            color: #0fb784;
+        }
     </style>
 </head>
 <body>
@@ -73,6 +81,24 @@
     </dd>
 </dl>
 
+<h3 id="national-parks-heading">Glacier Bay</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<button id="highlighter">Highlight the last li of each ul</button>
 
 <script
         src="https://code.jquery.com/jquery-3.4.1.slim.js"
@@ -95,6 +121,22 @@
 
         $('dt').click(function(){
             $(this).toggleClass('highlight');
+        });
+
+        $('#highlighter').click(function(){
+            $('ul').each(function(){
+                $(this).children().last().toggleClass('highlight');
+            });
+        });
+
+        $('h3').click(function(){
+            $(this).next().children().toggleClass('bold-font');
+        });
+
+        $('li').click(function(){
+            // li --> ul -> lis of ul > first
+            $(this).parent().children().first().toggleClass('first-item-highlight')
+            //or $(this).parent().children().first().css('color', 'blue');
         });
 
 
