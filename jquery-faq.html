@@ -106,11 +106,7 @@
 
 <button id="highlighter">Highlight the last li of each ul</button>
 
-<script
-        src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-        crossOrigin="anonymous">
-</script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
 
@@ -139,6 +135,8 @@
 
         h3Element.click(function(){
             $(this).next().children().toggleClass('bold-font');
+            $(this).next().slideToggle();
+
         });
 
         $('li').click(function(){
@@ -152,13 +150,6 @@
            $(this).parent().hide();
         });
 
-        h3Element.click(function (){
-            $('ul').hide();
-        });
-
-       h3Element.click(function(){
-            $('ul').slideToggle();
-        });
 
        $('h2').show(function(){
            $(this).fadeOut(8000);
