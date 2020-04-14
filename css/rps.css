@@ -1,57 +1,50 @@
-/*GAME WRAPPER*/
+/* [GAME WRAPPER] */
 #rps-game {
     max-width: 600px;
     display: grid;
     grid-template-columns: 50% 50%;
 }
-
-#rps-you,#rps-com {
+#rps-you, #rps-com {
     padding: 15px;
     text-align: center;
 }
 
-/*ROCK/PAPER/SCISSORS IMAGE*/
-#rps-your-move, #rps-com-move {
+/* [ROCK/PAPER/SCISSORS IMAGE] */
+#rps-you-move, #rps-com-move {
     height: 200px;
     margin-bottom: 10px;
 }
-
-#rps-game img{
+#rps-game img {
     width: auto;
     height: 200px;
 }
 
-/*YOUR MOVE*/
-#rps-you{
-    background: #37718E;
+/* [YOUR MOVE] */
+#rps-you {
+    background: #ffdada;
 }
-#rps-you-sel,#rps-you-go{
+#rps-you-sel, #rps-you-go {
     box-sizing: border-box;
     display: block;
     margin: 0;
     padding: 10px;
-    border:0;
+    border: 0;
     float: left;
 }
+#rps-you-sel { width: 70%; }
+#rps-you-go { width: 30%; }
 
-#rps-you-sel{
-    width: 70%;
+/* [COMPUTER'S MOVE] */
+#rps-com {
+    background: #dcffdc;
 }
 
-#rps-you-go{
-    width: 30%;
-}
-
-/*COMPUTERS MOVE*/
-#rps-com{
-    background: darkgoldenrod;
-}
-
-/*SCOREBOARD*/
-#rps-score{
+/* [SCOREBOARD] */
+#rps-score {
     margin-top: 10px;
 }
 
-html, body{
-    font-family: 'Oswald', sans-serif;
+/* [DOES NOT MATTER] */
+html, body {
+    font-family: arial, sans-serif;
 }
