@@ -3,45 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>10 FAQs</title>
+
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: #37718E;
+            font-weight: bolder;
+        }
+
+        dt {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+
+
 <p>10 FAQs About National Parks</p>
+
+<a href="#" id="display-dd">Show Facts</a>
+
+
 <dl>
     <dt>Great Smoky Mountains</dt>
-    <dd>Had more than 11 million visitors in 2018, it is located between Tennessee and North Carolina.</dd>
+    <dd class="invisible">Had more than 11 million visitors in 2018, it is located between Tennessee and North Carolina
+        .
+    </dd>
 
     <dt>Grand Canyon</dt>
-    <dd>Located only in Arizona, covering 277 miles in length. </dd>
+    <dd class="invisible">Located only in Arizona, covering 277 miles in length.</dd>
 
     <dt>Yellowstone</dt>
-    <dd>Oldest national park, is home to over 500 geysers, is a super volcano.</dd>
+    <dd class="invisible">Oldest national park, is home to over 500 geysers, is a super volcano.</dd>
 
     <dt>Wrangell-St. Elias</dt>
-    <dd>The largest national park, larger than Yellowstone, Yosemite, Grand Canyon, and Death Valley all combined.</dd>
+    <dd class="invisible">The largest national park, larger than Yellowstone, Yosemite, Grand Canyon, and Death Valley
+        all combined.
+    </dd>
 
     <dt>Hot Springs</dt>
-    <dd>Located in Arkansas, is the smallest national park.</dd>
+    <dd class="invisible">Located in Arkansas, is the smallest national park.</dd>
 
     <dt>Yosemite</dt>
-    <dd>Located in California which is home to nine national parks, with yosemite being the most visited, 4 million
-    visitors annually.</dd>
+    <dd class="invisible">Located in California which is home to nine national parks, with yosemite being the most
+        visited, 4 million
+        visitors annually.
+    </dd>
 
     <dt>Death Valley</dt>
-    <dd>The hottest, driest, and lowest place in the US. Temps often reach 120 degrees fahrenheit, sometimes more.</dd>
+    <dd class="invisible">The hottest, driest, and lowest place in the US. Temps often reach 120 degrees fahrenheit,
+        sometimes more.
+    </dd>
 
     <dt>Bryce Canyon</dt>
-    <dd>Located in Utah, temps during the day reach 80's and at night reach the 50's.</dd>
+    <dd class="invisible">Located in Utah, temps during the day reach 80's and at night reach the 50's.</dd>
 
     <dt>Glacier</dt>
-    <dd>Located in Montana, it has breath-taking views that include rugged mountains, jagged glaciers, rafting, turquoise-blue alpine lakes, and meadows abounding in wildflowers.</dd>
+    <dd class="invisible">Located in Montana, it has breath-taking views that include rugged mountains, jagged glaciers,
+        rafting, turquoise-blue alpine lakes, and meadows abounding in wildflowers.
+    </dd>
 
     <dt>Glacier Bay</dt>
-    <dd>Located on the coast of Alaska, it is larger than the state if Connecticut. Ice that breaks off from the
-        tidewater glaciers is between 75 and 200 years old.</dd>
+    <dd class="invisible">Located on the coast of Alaska, it is larger than the state if Connecticut. Ice that breaks
+        off from the
+        tidewater glaciers is between 75 and 200 years old.
+    </dd>
 </dl>
 
 
+<script
+        src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+        crossOrigin="anonymous">
+</script>
+<script>
+    $(document).ready(function(){
+        $('#display-dd').click(function(event){
+            event.preventDefault();
+            $('dd').toggleAttribute('invisible');
+            if($('dd')[0].className !== 'invisible'){
+                $(this).text('Hide facts')
+            }else{
+                $(this).text('Show facts')
+            }
 
+        });
+
+        $('dt').click(function(){
+            $(this).toggleAttribute('highlight');
+        });
+
+
+    });
+
+
+</script>
 
 
 </body>
