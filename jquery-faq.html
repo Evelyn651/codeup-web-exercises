@@ -34,6 +34,8 @@
     <span id="hide-div">X</span>
 </div>
 
+<h2>Would you like to register to this site?</h2>
+
 <p>10 FAQs About National Parks</p>
 
 <a href="#" id="display-dd">Show Facts</a>
@@ -85,7 +87,7 @@
     </dd>
 </dl>
 
-<h3 id="national-parks-heading">Glacier Bay</h3>
+<h3 id="parks-heading" class="header">Glacier Bay</h3>
 <ul id="national-parks">
     <li>Arches</li>
     <li>Badlands</li>
@@ -93,7 +95,7 @@
     <li>Denali</li>
     <li>Everglades</li>
 </ul>
-<h3>State Parks of Texas</h3>
+<h3 class="header">State Parks of Texas</h3>
 <ul id="state-parks-texas">
     <li>Abilene</li>
     <li>Big Bend</li>
@@ -116,12 +118,14 @@
             event.preventDefault();
             $('dd').toggleClass("invisible");
             if($('dd')[0].className !== "invisible"){
-                $(this).text('Hide facts')
+                $(this).text('Hide Facts')
             }else{
-                $(this).text('Show facts')
+                $(this).text('Show Facts')
             }
 
         });
+
+        var h3Element = $('h3');
 
         $('dt').click(function(){
             $(this).toggleClass('highlight');
@@ -133,7 +137,7 @@
             });
         });
 
-        $('h3').click(function(){
+        h3Element.click(function(){
             $(this).next().children().toggleClass('bold-font');
         });
 
@@ -147,6 +151,21 @@
         $('#hide-div').click(function(){
            $(this).parent().hide();
         });
+
+        h3Element.click(function (){
+            $('ul').hide();
+        });
+
+       h3Element.click(function(){
+            $('ul').slideToggle();
+        });
+
+       $('h2').show(function(){
+           $(this).fadeOut(8000);
+       })
+
+
+
 
 
     });
