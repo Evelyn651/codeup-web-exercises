@@ -33,3 +33,6 @@ var plantsNeedWater = (day) => {
 };
 
 console.log(plantsNeedWater('Friday'));
+
+// 10- Concise Body Arrow Functions
+
