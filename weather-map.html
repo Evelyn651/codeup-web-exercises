@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map project</title>
+</head>
+<body>
+
+<img id="icon" alt="weather icon">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/keys.js"></script>
+
+<script>
+    "use strict";
+    (function(){
+       $.get("http://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={weatherMapKey}", {
+            "APPID": weatherMapKey,
+                "q":     "Dallas, US"
+    }).done(function(data){
+        console.log(data);
+       })
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather API</title>
+</head>
+<body>
+
+<img id="icon" alt="weather icon">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/keys.js"></script>
+
+<script>
+    "use strict";
+    (function() {
+
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            "APPID": weatherMapKey,
+            "q":     "Dallas, US",
+            "units": "imperial"
+        }).done(function(data) {
+            console.log('current weather', data);
+            var imgUrl = "http://openweathermap.org/img/w/"+data.list[9].weather[0].icon+".png";
+            $("#icon").attr('src', imgUrl);
+        });
+
+    })();
+</script>
+</body>
+</html>
