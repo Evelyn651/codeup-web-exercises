@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promises lecture</title>
+</head>
+<body>
+
+
+<script>
+    "use strict";
+    let url = 'https://api.github.com/users';
+    fetch(url)
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
+
+    //create a promise and save into a variable
+    const myPromise = fetch('https://api.github.com/users');
+    //handle the response if the promise is resolved
+    myPromise.then(response => console.log(response));
+    //handle the erros of the promise is not resolved
+    myPromise.catch(error => console.error(error));
+    //promises can be stacked and called at the same time
+    Promise.all([myPromise, anotherPromise])
+</script>
+</body>
+</html>
