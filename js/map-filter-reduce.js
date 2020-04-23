@@ -73,3 +73,15 @@ const everyone = users.reduce((names, user) => {
 
 console.log(`Your instructors are: ${everyone}`);
 console.log('using join', users.map(user => user.name).join(', '));
+
+// bonus
+const allLanguages = users.reduce((languages, user) => {
+    user.languages.forEach((language) => {
+        if (!languages.includes(language)){
+            languages.push(language)
+        }
+    });
+    return languages;
+}, []);
+
+console.log(allLanguages);
