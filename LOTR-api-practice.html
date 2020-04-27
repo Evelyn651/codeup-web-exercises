@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lord of the Rings API</title>
+</head>
+<body>
+
+<script src="js/keys.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    let url = 'https://the-one-api.herokuapp.com/v1/book';
+
+    // $(document).ready(function(){
+    //     $.get(url).done(function(data){
+    //         console.log(data);
+    //     })
+    //
+    // })
+
+    fetch (url, {headers: {'Authorization': `Bearer ${LOTR_KEY}`}})
+        .then(response => response.json().then(data => {
+            console.log(data);
+            console.log(data.docs[0]);
+        }))
+        // .catch(error => console.log(error));
+</script>
+</body>
+</html>
