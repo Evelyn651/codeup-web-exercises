@@ -10,6 +10,13 @@
 <body>
 
 <main class="container">
+    <nav class="navbar navbar-light bg-info">
+        <a class="navbar-brand">Your Local Weather</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search for a City" aria-label="Search">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
     <div id="weather" class="card-deck"></div>
 
 
@@ -44,16 +51,15 @@
 
         for (let i = 0; i < 40; i += 8) {
 
-            let renderHTML = `<div class="card">` +
-                `<img src="..." class="card-img-top" alt="...">` +
+            let renderHTML = `<div class="card shadow p-3 mb-5">` +
                 `<div class="card-body">` +
-                `<h5 class="card-title">${data.list[i].dt_txt}</h5>` +
-                `<p class="card-text">${data.list[i].main.temp_max} </p>` +
-                `<p class="card-text"> ${data.list[i].main.temp_min} </p>` +
-                `<p class="card-text"> ${data.list[i].weather[0].description} </p>` +
-                `<p class="card-text">${data.list[i].main.humidity} </p>` +
-                `<p class="card-text"> ${data.list[i].wind.speed}</p>` +
-                `<p class="card-text">${data.list[i].main.pressure} </p>` +
+                `<h5 class="card-title "> Date & Time: ${data.list[i].dt_txt}</h5>` +
+                `<p class="card-text"> Max Temp: ${data.list[i].main.temp_max} </p>` +
+                `<p class="card-text"> Min Temp: ${data.list[i].main.temp_min} </p>` +
+                `<p class="card-text"> Description: ${data.list[i].weather[0].description} </p>` +
+                `<p class="card-text"> Humidity: ${data.list[i].main.humidity} </p>` +
+                `<p class="card-text"> Wind Speeds: ${data.list[i].wind.speed}</p>` +
+                `<p class="card-text"> Pressure: ${data.list[i].main.pressure} </p>` +
                 `</div>` +
                 `</div>`
 
