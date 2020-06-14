@@ -21,7 +21,7 @@
 
 /* [YOUR MOVE] */
 #rps-you {
-    background: #ffdada;
+    background: cadetblue;
 }
 #rps-you-sel, #rps-you-go {
     box-sizing: border-box;
@@ -36,7 +36,7 @@
 
 /* [COMPUTER'S MOVE] */
 #rps-com {
-    background: #dcffdc;
+    background: antiquewhite;
 }
 
 /* [SCOREBOARD] */
